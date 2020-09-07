@@ -1,14 +1,14 @@
 <div class="tabs">
-	<ul class="tabs">
-		<li><a href="#Menu_01">1</a></li>
-		<li><a href="#Menu_02">2</a></li>
-		<li><a href="#Menu_03">3</a></li>
+	<ul>
+		<li><a href="#menu01">1</a></li>
+		<li><a href="#menu02">2</a></li>
+		<li><a href="#menu03">3</a></li>
 	</ul>
 </div>
 
-<div id="Menu_01" class="content_meeting">contents</div>
-<div id="Menu_02" class="content_meeting">contents</div>
-<div id="Menu_03" class="content_meeting">contents</div>
+<div id="menu01" class="tabCont">contents</div>
+<div id="menu02" class="tabCont">contents</div>
+<div id="menu03" class="tabCont">contents</div>
 
 
 
@@ -19,7 +19,7 @@ $(function(){
 
 		$(this).bind('click', function(e){
 			e.preventDefault();
-			$('.content_meeting').css('display','none');
+			$('.tabCont').css('display','none');
 			$('.tabs ul li > a').removeClass('on');
 			
 			var contLink = $(this).attr('href');
@@ -27,6 +27,5 @@ $(function(){
 			$(this).addClass('on');
 		});
 	});
-	
 	$('.tabs ul li:eq(0) a').click();
 });
